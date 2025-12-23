@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+     <div class="page">
+  <div class="card">
+
+    <form id="signupForm">
+        <h1>Signup Page</h1>
+    <input type="text" id="username" placeholder="Enter Username">
+    <span id="nameError" style="color:red; display:none;"> Name must be more than 3 characters and no numbers</span>
+    <br><br>
+    <input type="password" id="password" placeholder="Enter Password">
+    <span id="passrequired" style="color:red; display:none;"> Password must contain at least one symbol, one uppercase letter,and one number</span>
+    <br><br>
+    <input type="password" id="confirmPassword" placeholder="Confirm Password">
+    <span id="passwordError" style="color:red; display:none;"> Passwords do not match</span>
+    <br><br>
+    <button type="submit" id="register">Register</button>
+    <span id="invalid" style="color:red; display:none;">Please check your inputs and try again.</span>
+    </form>
+      </div>
+</div>
+
+    <script src="signup.js"></script>
+</body>
+</html>
