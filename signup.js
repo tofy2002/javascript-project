@@ -55,14 +55,8 @@ let passwordError=document.getElementById("passwordError");
 let passrequired=document.getElementById("passrequired");
 function validatename(){
     let value1=username.value
-    let hasnum=false
-    value1.split("").forEach(e => {
-        if(e>= "0" && e<="9"){
-            hasnum=true;
-        }
-    });
     let nameRegex=/^[A-Za-z ]+$/
-    if(!hasnum && value1.length > 3 && nameRegex.test(value1)){
+    if(value1.length > 3 && nameRegex.test(value1)){
         nameError.style.display="none";
         username.style.border="1.5px solid green"
         return true;
@@ -120,12 +114,15 @@ let i=0
 signup.addEventListener("submit",function(e){
   
   // e.preventdeafult();
+   if (hasCookie(username.value)) {
+    alert("This username is already taked. Please use other.");
+    return;
+  }
    let nameval=validatename();
     let passval=validatepass();
     let regexval=validateregex();
     if(!nameval || !passval || !regexval){
       e.preventDefault();
-      
       invalid.style.display="inline"
       return;
     }
