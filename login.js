@@ -33,14 +33,28 @@ document.getElementById("liginform").addEventListener("submit", function (e) {
   e.preventDefault();
   sumbit();
 });
-function sumbit(){
-        if(getCookie(username.value) == username.value && getCookie(password.value) == password.value){
-           win_h=window.open("home.html"); 
-        }
-        else{
-            win_s=window.open("signup.html");
-        }
-    }
+// function sumbit(){
+//         if(getCookie(username.value) == username.value && getCookie(password.value) == password.value){
+//            win_h=window.open("home.html"); 
+//         }
+//         else{
+//             win_s=window.open("signup.html");
+//         }
+//     }
 function signup(){
             win_s=window.open("signup.html");
     }   
+function sumbit(){
+  if(getCookie(username.value) == username.value ){
+    if(getCookie(password.value) == password.value){
+           win_h=window.open("home.html"); 
+        }
+        else{
+            alert("Incorrect Password");
+        }
+}
+else{
+    alert("Username not found, Please Sign Up");
+    win_s=window.open("signup.html");
+}
+}
