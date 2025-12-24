@@ -93,34 +93,34 @@ function getcards() {
         window.open("description.html?id=" + card3.getAttribute("data-id"), "_self");
       });
   
-      i = 1;
+      let i1 = 1;
       img1 = setInterval(() => {
-        card1.src = img_card[i];
-        text1.innerText = title[i];
-        card1.setAttribute("data-id", data[i].id);
-        i++;
-        if (i == img_card.length) {
-          i = 0;
+        card1.src = img_card[i1];
+        text1.innerText = title[i1];
+        card1.setAttribute("data-id", data[i1].id);
+        i1++;
+        if (i1 == img_card.length) {
+          i1 = 0;
         }
       }, 2000);
-      i=2
+      let i2 = 2;
       img2 = setInterval(() => {
-        card2.src = img_card[i];
-        text2.innerText = title[i];
-        card2.setAttribute("data-id", data[i].id);
-        i++;
-        if (i == img_card.length) {
-          i = 0;
+        card2.src = img_card[i2];
+        text2.innerText = title[i2];
+        card2.setAttribute("data-id", data[i2].id);
+        i2++;
+        if (i2 == img_card.length) {
+          i2 = 0;
         }
       }, 2000);
-      i=3
+      let i3 = 3;
       img3 = setInterval(() => {
-        card3.src = img_card[i];
-        text3.innerText = title[i];
-        card3.setAttribute("data-id", data[i].id);
-        i++;
-        if (i == img_card.length) {
-          i = 0;
+        card3.src = img_card[i3];
+        text3.innerText = title[i3];
+        card3.setAttribute("data-id", data[i3].id);
+        i3++;
+        if (i3 == img_card.length) {
+          i3 = 0;
         }
       }, 2000);
     }
