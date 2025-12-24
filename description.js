@@ -17,7 +17,8 @@ xhr.onreadystatechange = function () {
     document.getElementById("details").innerHTML = `
       <h2>${product.title}</h2>
       <img src="${product.image}" width="250" />
-      <p><Price:$${product.price}</p>
+      <p>Price: $${product.price}</p>
+      <p>Rating: ${product.rating.rate}</p>
       <p>Category: ${product.category}</p>
       <p>Description: ${product.description}</p>
     `;
