@@ -129,8 +129,9 @@ signup.addEventListener("submit",function(e){
     else{
      
       invalid.style.display="none"
-      setCookie(username.value,username.value,1)
-      setCookie(password.value,password.value,1)
+      setCookie(username.value, username.value, 1)                 
+      setCookie(username.value + "_pass", password.value, 1)        
+
       alert("Registration successful!");
       window.open("login.html")
     }
